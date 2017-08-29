@@ -37,7 +37,7 @@ describe('Promise Basics 💾', function () {
   });
 
   test('3. the `reject` function can return a value, that is consumed by the `promise.catch()` callback', () => {
-    const promise = new Promise((reject) => {
+    const promise = new Promise((resolve, reject) => {
       setTimeout(function(){
         reject('not so nice'); // Yay! Everything went well!
       }, 250);
